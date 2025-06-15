@@ -123,6 +123,8 @@ class ProfilePage extends StatelessWidget {
           Expanded(
             child: Image.asset(
               'assets/images/profile.jpg',
+              width: 350,
+              height: 350,
             ),
           )
         ],
