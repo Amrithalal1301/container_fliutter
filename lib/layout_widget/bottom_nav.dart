@@ -15,7 +15,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
    int _selectedIndex = 0;
    static final List<Widget> _widgetOptions =<Widget>[
     HomePage(),
-   // SearchScreen(),
+    SearchBar(),
     const Text('Profile'),
    
    ];
@@ -86,3 +86,21 @@ class HomePage extends StatelessWidget {
   }
 }
 
+class SearchBar extends StatelessWidget {
+  const SearchBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text('Home', style: TextStyle(fontSize:24,fontWeight: FontWeight.bold ,),),
+          Image.asset(
+            'assets/images/beagle.jpg',
+          )
+        ],
+      ),
+    );
+  }
+}
