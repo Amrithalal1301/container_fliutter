@@ -16,7 +16,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
    static final List<Widget> _widgetOptions =<Widget>[
     HomePage(),
     SearchBar(),
-    const Text('Profile'),
+    ProfilePage()
    
    ];
 
@@ -74,10 +74,12 @@ class HomePage extends StatelessWidget {
         children: [
           const Text('Home', style: TextStyle(fontSize:24,fontWeight: FontWeight.bold ,),),
           //Image.network('https://www.istockphoto.com/search/2/image-film?phrase=homepage', width: 150,height: 150, ),
-        Image.asset(
-           'assets/images/home.jpg',
-           
-       )
+        Expanded(
+          child: Image.asset(
+             'assets/images/home.jpg',
+             
+                 ),
+        )
 
           
         ],
@@ -96,8 +98,32 @@ class SearchBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text('Search', style: TextStyle(fontSize:24,fontWeight: FontWeight.bold ,),),
-          Image.asset(
-            'assets/images/search.jpg',
+          Expanded(
+            child: Image.asset(
+              'assets/images/search.jpg',
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text('Profile', style: TextStyle(fontSize:24,fontWeight: FontWeight.bold ,),),
+          Expanded(
+            child: Image.asset(
+              'assets/images/profile.jpg',
+            ),
           )
         ],
       ),
